@@ -6,18 +6,23 @@ class Cart extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { isReset: false, nitems:0 };
+    this.state = { isReset: false, items: [] };
 
     this.handleReset = this.handleReset.bind(this);
-    this.addAnItem = this.addAnItem.bind(this)
+    this.addAnItem = this.addAnItem.bind(this);
   }
 
   handleReset() {
     this.setState({ isReset: true });
   }
 
-  addAnItem(){
-    this.setState({nitems:this.state.nitems+1})
+  addAnItem() {
+    // this.setState({nitems:this.state.nitems+1})
+    // const newItem = <Item reset={this.state.isReset} />
+    // let newState = {isReset:this.state.isReset,items: [...this.state.items, ...[newItem]])}
+    const newItem = <Item reset={this.state.isReset} />;
+    let newItems = [...this.state.items, ...[newItem]];
+    this.setState({ items: newItems });
   }
   render() {
     return (
@@ -26,8 +31,7 @@ class Cart extends Component {
         <button onClick={this.addAnItem}>Add an item</button>
         <br />
 
-      {(Array.from({length:this.state.nitems})).map(n=><Item reset={this.state.isReset}/>)}
-
+        {this.state.items}
       </div>
     );
   }

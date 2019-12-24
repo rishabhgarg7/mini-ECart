@@ -5,10 +5,8 @@ class Item extends Component {
   constructor(props) {
     super(props);
 
-    let nq = this.props.reset ? 0 : 2;
-
     this.state = {
-      nquantity: nq
+      nquantity: 0
     };
     this.handleIncrement = this.handleIncrement.bind(this);
     this.handleDecrement = this.handleDecrement.bind(this);

@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Happy Coding!</h1>
-        <h2>Keep Building</h2>
+        <h2>E-cart functionalities w/o styling</h2>
         <Cart />
       </div>
     );
