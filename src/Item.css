@@ -1,0 +1,14 @@
+.Item {
+  display: inline-block;
+  margin: 1em;
+}
+
+.Item-nquantity {
+  display: inline-block;
+  margin: 1em;
+}
+
+.Item-button {
+  display: inline-block;
+  margin: 1em;
+}
